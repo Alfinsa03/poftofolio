@@ -1,0 +1,169 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* Use a more common fallback font */
+    background-color: #024a7f;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Container Styles */
+.login-container {
+    display: flex;
+    padding: 30px;
+    background-color: rgb(46, 50, 52);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    align-items: center; /* Align vertically */
+    max-width: 800px; /* Set a max-width for larger screens */
+    width: 90%; /* Occupy 90% of the container width */
+    margin: 0 auto; /* Center on the page */
+}
+
+
+/* Image Container Styles */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 114px; /* Maintain the rounded image */
+}
+
+/* Form Container Styles */
+.form-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Typography */
+h2 {
+    text-align: start;
+    margin-bottom: 20px;
+    color: #ff0000;
+    font-size: 2em; /* Use relative units (em) for better scaling */
+}
+
+label {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #024a7f;
+}
+
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Inputs should take full width of their container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #26b6c0;
+    background-color: #e0f7fa;
+}
+
+input:focus {
+    border-color: #000000;
+    background-color: rgb(136, 194, 219);
+    outline: none;
+}
+
+
+/* Button Styles */
+button {
+    width: 100%;  /* Button should also take full width */
+    padding: 10px;
+    background: linear-gradient(135deg, #2438ba, #26b6c0);
+    border: none;
+    color: white;
+    font-size: 1em; /* Use relative units */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #26b6c0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* Error Message Styles */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+    background-color: #ffcccc;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+/* Animations */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+.slide {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+
+
+
+/* Media Queries for Responsiveness (Improved) */
+@media (max-width: 768px) {  /* Use a common breakpoint */
+    .login-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: stretch;  /* Allow children to take full width */
+    }
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+}
